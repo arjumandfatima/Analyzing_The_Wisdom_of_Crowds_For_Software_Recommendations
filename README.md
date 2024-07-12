@@ -17,9 +17,19 @@ Once the download is complete, uncompress each of these folders, each of which c
 ## Splitting Large Sized XML Files
 For splitting the large sized XML files to multiple smaller sized files which can be easily processed, we used gitbash as described [here](https://stackoverflow.com/questions/31786287/how-to-split-large-text-file-in-windows)
 Using the gitbash console, go to the folder containing the large sized XML file that you want to split e.g. Posts.xml and type the following command.
-```split -l 50000 -d -a 10 Posts.xml Posts```
+```
+split -l 50000 -d -a 10 Posts.xml Posts
+```
 Similarly we used the following commands for other files. 
-```split -l 50000 -d -a 5 Badges.xml Badges```
-```split -l 50000 -d -a 5 Users.xml Users```
-```split -l 50000 -d -a 8 Comments.xml Comments```
-```split -l 50000 -d -a 5 Votes.xml Votes```
+```
+split -l 50000 -d -a 5 Badges.xml Badges
+```
+```
+split -l 50000 -d -a 5 Users.xml Users
+```
+```
+split -l 50000 -d -a 8 Comments.xml Comments
+```
+```
+split -l 50000 -d -a 5 Votes.xml Votes
+```
