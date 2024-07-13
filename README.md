@@ -62,4 +62,4 @@ The above code snipped when executed will convert the splitted files to proper x
 ## From XML files to Database Records
 The next step is to read these XML files one by one and store them in a database which can be queried for easy retrieval of relavant records. We used the MS SQL Server Developer Edition as the Express Edition restricts the maximum database size to 10GB only which was not useful in this case.
 
-## Creating the Databases and Tables
+### Creating the Databases and Tables
