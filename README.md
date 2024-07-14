@@ -60,6 +60,8 @@ for filename in glob.glob(os.path.join(input_path, '*')):
 ```
 The above code snipped when executed will convert the splitted files to proper xml files of small size which can be easily processed further. 
 ## From XML files to Database Records
-The next step is to read these XML files one by one and store them in a database which can be queried for easy retrieval of relavant records. We used the MS SQL Server Developer Edition as the Express Edition restricts the maximum database size to 10GB only which was not useful in this case.
+The next step is to read these XML files one by one and store them in a database which can be queried for easy retrieval of relavant records. We used the MS SQL Server Developer Edition as the Express Edition restricts the maximum database size to 10GB only which was not useful in this case. However, the Developer Edition can't be used in a production environment.
 
 ### Creating the Databases and Tables
+Using SQL Server Management Studio (SSMS),right click on the ```Databases``` under your SQL Server instance in the ```Object Explorer``` and select ```New Database```
+In the ```New Database``` pop-up window, type the name of the database. Instead of using a single database to store all the above mentioned files in different tables, we created separate databases corresponding to each of the above mentioned files. e.g. ```StackOverflowPostsDb_April2024```, ```StackOverflowTagsDb_April2024``` and so on. Owing to the large size of data to be stored, make sure to change default Path of database files from ```C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\ ``` to some other directory containing ample amount of storage capacity.
